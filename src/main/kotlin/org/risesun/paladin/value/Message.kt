@@ -1,10 +1,12 @@
 package org.risesun.paladin.value
 
 import org.risesun.paladin.constant.MessageConstantValue
+import java.io.Serializable
 
-class Message<T> {
-
+class Message<T> : Serializable {
     companion object {
+        private const val serialVersionUID = -6482341476084586139L
+
         fun <T> success(content: T): Message<T> {
             return build(content, MessageConstantValue.RESULT_SUCCESS, MessageConstantValue.CODE_SERVER_RIGHT, null)
         }
