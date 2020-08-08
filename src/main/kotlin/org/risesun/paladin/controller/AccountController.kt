@@ -1,6 +1,5 @@
 package org.risesun.paladin.controller
 
-import org.risesun.paladin.utils.RandomUtils
 import org.risesun.paladin.value.LoginRequestValue
 import org.risesun.paladin.value.Message
 import org.springframework.web.bind.annotation.RequestBody
