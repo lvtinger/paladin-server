@@ -1,6 +1,9 @@
 package org.risesun.paladin.entity
 
-class Relation : Entity<String>() {
+import javax.persistence.Entity
+
+@Entity
+class Relation : AbstractEntity<String>() {
     var friendId: Long? = null
     var relation: Int? = null
     var memberId: Long? = null
