@@ -4,8 +4,8 @@ import javax.persistence.Entity
 
 @Entity
 class Relation : AbstractEntity<String>() {
-    var friendId: Long? = null
+    var friend: Long? = null
     var relation: Int? = null
-    var memberId: Long? = null
-    var describe: String? = null
+    var member: Long? = null
+    var desc: String? = null
 }

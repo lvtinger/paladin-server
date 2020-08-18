@@ -1,10 +1,10 @@
 package org.risesun.paladin.entity
 
 import java.io.Serializable
-import javax.persistence.Entity
 import javax.persistence.Id
+import javax.persistence.MappedSuperclass
 
-@Entity
+@MappedSuperclass
 abstract class AbstractEntity<ID : Serializable> : Serializable {
     @Id
     var id: ID? = null
