@@ -1,6 +1,6 @@
-package org.risesun.paladin.repository
+package org.risesun.paladin.provider.impl.repository
 
-import org.risesun.paladin.entity.Account
+import org.risesun.paladin.provider.api.entity.Account
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

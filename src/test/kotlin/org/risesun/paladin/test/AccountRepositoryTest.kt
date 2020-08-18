@@ -2,12 +2,11 @@ package org.risesun.paladin.test
 
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.risesun.paladin.entity.Account
-import org.risesun.paladin.repository.AccountRepository
+import org.risesun.paladin.provider.api.entity.Account
+import org.risesun.paladin.provider.impl.repository.AccountRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
-import java.util.*
 
 @RunWith(SpringRunner::class)
 @SpringBootTest

@@ -1,4 +1,4 @@
-package org.risesun.paladin.entity
+package org.risesun.paladin.provider.api.entity
 
 import javax.persistence.Entity
 
