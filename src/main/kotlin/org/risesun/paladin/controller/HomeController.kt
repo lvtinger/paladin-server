@@ -21,14 +21,14 @@ open class HomeController {
     @RequestMapping("/redis/set", method = [RequestMethod.GET])
     open fun set():Long{
         val millis = System.currentTimeMillis()
-        redisUtil.set("current", millis)
+        redisUtil["current"] = millis
         redisUtil.expire("current", 60 * 60)
         return millis
     }
 
     @RequestMapping("/redis/get", method = [RequestMethod.GET])
     open fun get(): Long {
-        val cachedValue = redisUtil.get("current")
+        val cachedValue = redisUtil["current"]
         return ConverterUtils.toLong(cachedValue, 0L)
     }
 }
