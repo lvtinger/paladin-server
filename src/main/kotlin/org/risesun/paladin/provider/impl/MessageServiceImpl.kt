@@ -1,8 +1,8 @@
-package org.risesun.paladin.provider.impl.service
+package org.risesun.paladin.provider.impl
 
-import org.risesun.paladin.provider.api.entity.Message
-import org.risesun.paladin.provider.api.service.MessageService
-import org.risesun.paladin.provider.impl.repository.MessageRepository
+import org.risesun.paladin.provider.entity.Message
+import org.risesun.paladin.provider.api.MessageService
+import org.risesun.paladin.provider.repository.MessageRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

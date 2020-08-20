@@ -1,6 +1,6 @@
-package org.risesun.paladin.provider.impl.repository
+package org.risesun.paladin.provider.repository
 
-import org.risesun.paladin.provider.api.entity.Message
+import org.risesun.paladin.provider.entity.Message
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface MessageRepository : JpaRepository<Message, String> {

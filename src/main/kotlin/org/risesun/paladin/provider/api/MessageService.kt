@@ -1,6 +1,6 @@
-package org.risesun.paladin.provider.api.service
+package org.risesun.paladin.provider.api
 
-import org.risesun.paladin.provider.api.entity.Message
+import org.risesun.paladin.provider.entity.Message
 
 interface MessageService {
     fun save(message: Message)

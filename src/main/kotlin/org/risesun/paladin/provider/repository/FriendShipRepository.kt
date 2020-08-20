@@ -1,6 +1,6 @@
-package org.risesun.paladin.provider.impl.repository
+package org.risesun.paladin.provider.repository
 
-import org.risesun.paladin.provider.api.entity.FriendShip
+import org.risesun.paladin.provider.entity.FriendShip
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

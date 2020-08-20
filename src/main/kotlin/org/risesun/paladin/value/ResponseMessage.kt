@@ -3,24 +3,24 @@ package org.risesun.paladin.value
 import org.risesun.paladin.constant.MessageConstantValue
 import java.io.Serializable
 
-class Message<T> : Serializable {
+class ResponseMessage<T> : Serializable {
     companion object {
         private const val serialVersionUID = -6482341476084586139L
 
-        fun <T> success(content: T): Message<T> {
+        fun <T> success(content: T): ResponseMessage<T> {
             return build(content, MessageConstantValue.RESULT_SUCCESS, MessageConstantValue.CODE_SERVER_RIGHT, null)
         }
 
-        fun <T> failure(message: String, code: Int = MessageConstantValue.CODE_COMMON_ERROR): Message<T> {
+        fun <T> failure(message: String, code: Int = MessageConstantValue.CODE_COMMON_ERROR): ResponseMessage<T> {
             return build(null, MessageConstantValue.RESULT_SUCCESS, code, message)
         }
 
-        fun <T> error(message: String, code: Int): Message<T> {
+        fun <T> error(message: String, code: Int): ResponseMessage<T> {
             return build(null, MessageConstantValue.RESULT_FAILURE, code, message)
         }
 
-        private fun <T> build(content: T?, success: Boolean?, code: Int?, message: String?): Message<T> {
-            val result = Message<T>()
+        private fun <T> build(content: T?, success: Boolean?, code: Int?, message: String?): ResponseMessage<T> {
+            val result = ResponseMessage<T>()
 
             result.code = code
             result.content = content
