@@ -55,4 +55,16 @@ class AccountServiceImpl : AccountService {
 
         return ResponseMessage.success(account)
     }
+
+    override fun change(id: Long, original: String, password: String): ResponseMessage<Boolean> {
+        val account = accountRepository.findById(id).orElse(null) ?: return ResponseMessage.failure("登录状态错误")
+        if (account.password != original) {
+            return ResponseMessage.failure("密码错误")
+        }
+
+        account.password = password
+        accountRepository.save(account)
+
+        return ResponseMessage.success(true)
+    }
 }
