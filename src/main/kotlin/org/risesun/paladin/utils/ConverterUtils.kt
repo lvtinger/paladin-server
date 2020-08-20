@@ -5,7 +5,7 @@ import java.util.*
 
 class ConverterUtils {
     companion object {
-        fun toLong(value: Any?, defaultValue: Long? = null): Long? {
+        fun toLong(value: Any?, defaultValue: Long = 0): Long {
             if (Objects.isNull(value)) {
                 return defaultValue
             }
