@@ -2,7 +2,7 @@ package org.risesun.paladin.provider.impl
 
 import org.risesun.paladin.provider.api.ProfileService
 import org.risesun.paladin.provider.entity.Profile
-import org.risesun.paladin.provider.repository.ProfileRepository
+import org.risesun.paladin.provider.dao.ProfileRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

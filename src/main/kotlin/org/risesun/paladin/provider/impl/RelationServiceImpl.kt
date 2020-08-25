@@ -2,7 +2,7 @@ package org.risesun.paladin.provider.impl
 
 import org.risesun.paladin.provider.api.RelationService
 import org.risesun.paladin.provider.entity.Relation
-import org.risesun.paladin.provider.repository.RelationRepository
+import org.risesun.paladin.provider.dao.RelationRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service

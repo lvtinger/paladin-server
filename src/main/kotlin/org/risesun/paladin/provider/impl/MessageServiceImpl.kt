@@ -2,7 +2,7 @@ package org.risesun.paladin.provider.impl
 
 import org.risesun.paladin.provider.entity.Message
 import org.risesun.paladin.provider.api.MessageService
-import org.risesun.paladin.provider.repository.MessageRepository
+import org.risesun.paladin.provider.dao.MessageRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

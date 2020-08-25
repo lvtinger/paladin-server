@@ -3,7 +3,7 @@ package org.risesun.paladin.test
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.risesun.paladin.provider.entity.Account
-import org.risesun.paladin.provider.repository.AccountRepository
+import org.risesun.paladin.provider.dao.AccountRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner

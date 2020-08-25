@@ -1,4 +1,4 @@
-package org.risesun.paladin.provider.repository
+package org.risesun.paladin.provider.dao
 
 import org.risesun.paladin.provider.entity.Relation
 import org.springframework.data.jpa.repository.JpaRepository

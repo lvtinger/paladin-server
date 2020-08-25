@@ -13,10 +13,6 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping(value = ["/account"])
 @RestController
 open class AccountController : AbstractController() {
-
-    @Autowired
-    private lateinit var accountService: AccountService
-
     @RequestMapping(value = ["/login.page"], method = [RequestMethod.POST])
     fun login(@RequestBody parameter: AccountRequestValue): ResponseMessage<Any?> {
         val message = parameter.validate()
