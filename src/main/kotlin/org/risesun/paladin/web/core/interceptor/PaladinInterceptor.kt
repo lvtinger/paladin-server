@@ -1,4 +1,4 @@
-package org.risesun.paladin.core.interceptor
+package org.risesun.paladin.web.core.interceptor
 
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.LoggerFactory

@@ -1,6 +1,6 @@
-package org.risesun.paladin.core.filter
+package org.risesun.paladin.web.core.filter
 
-import org.risesun.paladin.core.PaladinHttpRequestContext
+import org.risesun.paladin.web.core.PaladinHttpRequestContext
 import org.springframework.core.annotation.Order
 import org.springframework.stereotype.Component
 import org.springframework.web.filter.OncePerRequestFilter

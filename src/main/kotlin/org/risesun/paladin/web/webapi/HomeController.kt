@@ -1,7 +1,7 @@
-package org.risesun.paladin.controller
+package org.risesun.paladin.web.webapi
 
 import org.risesun.paladin.utils.ConverterUtils
-import org.risesun.paladin.utils.RedisUtil
+import org.risesun.paladin.compoment.RedisUtil
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod

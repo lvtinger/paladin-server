@@ -4,7 +4,7 @@ import org.risesun.paladin.provider.api.AccountService
 import org.risesun.paladin.provider.entity.Account
 import org.risesun.paladin.provider.repository.AccountRepository
 import org.risesun.paladin.utils.ConverterUtils
-import org.risesun.paladin.utils.RedisUtil
+import org.risesun.paladin.compoment.RedisUtil
 import org.risesun.paladin.value.ResponseMessage
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

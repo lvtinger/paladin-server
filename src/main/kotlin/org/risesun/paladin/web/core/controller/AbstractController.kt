@@ -1,6 +1,6 @@
-package org.risesun.paladin.core.controller
+package org.risesun.paladin.web.core.controller
 
-import org.risesun.paladin.core.PaladinHttpRequestContext
+import org.risesun.paladin.web.core.PaladinHttpRequestContext
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 

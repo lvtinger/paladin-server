@@ -1,6 +1,6 @@
-package org.risesun.paladin.controller
+package org.risesun.paladin.web.webapi
 
-import org.risesun.paladin.core.controller.AbstractController
+import org.risesun.paladin.web.core.controller.AbstractController
 import org.risesun.paladin.provider.api.AccountService
 import org.risesun.paladin.value.AccountRequestValue
 import org.risesun.paladin.value.ResponseMessage

@@ -1,4 +1,4 @@
-package org.risesun.paladin.utils
+package org.risesun.paladin.compoment
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.redis.core.RedisTemplate

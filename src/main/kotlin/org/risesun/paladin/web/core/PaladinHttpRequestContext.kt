@@ -1,6 +1,6 @@
-package org.risesun.paladin.core
+package org.risesun.paladin.web.core
 
-import org.risesun.paladin.core.filter.PaladinFilter
+import org.risesun.paladin.web.core.filter.PaladinFilter
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
