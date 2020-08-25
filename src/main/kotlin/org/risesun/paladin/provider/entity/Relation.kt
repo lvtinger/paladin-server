@@ -20,10 +20,15 @@ class Relation : AbstractEntity<String>() {
     }
 
     companion object {
-        const val TYPE_APPLY_FRIEND = 0
-        const val TYPE_WAIT_APPLY = 1
+        const val TYPE_APPLY = 0
+        const val TYPE_CHECK = 1
         const val TYPE_REFUSE = 3
+        const val TYPE_BREAK  = 5
         const val TYPE_BLACK = 2
         const val TYPE_FRIEND = 4
+
+        fun generateId(member: Long, friend: Long): String {
+            return "${member}-${friend}"
+        }
     }
 }

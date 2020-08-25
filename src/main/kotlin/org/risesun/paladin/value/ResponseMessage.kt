@@ -35,4 +35,8 @@ class ResponseMessage<T> : Serializable {
     var code: Int? = null
     var message: String? = null
     var content: T? = null
+
+    fun ok(): Boolean {
+        return success == true
+    }
 }

@@ -27,7 +27,7 @@ class AccountServiceImpl : AccountService {
         return ConverterUtils.toLong(redisUtil["PALADIN_TOKEN_${token}"])
     }
 
-    override fun login(username: String, password: String): ResponseMessage<String> {
+    override fun login(username: String, password: String): ResponseMessage<String?> {
         val account = accountRepository.findByUsername(username) ?: return ResponseMessage.failure("账户错误")
         if (account.password != password) {
             return ResponseMessage.failure("密码错误")
@@ -39,7 +39,7 @@ class AccountServiceImpl : AccountService {
         return ResponseMessage.success(token)
     }
 
-    override fun register(username: String, password: String): ResponseMessage<Account> {
+    override fun register(username: String, password: String): ResponseMessage<String?> {
         val exists = accountRepository.findByUsername(username)
         if (exists != null) {
             return ResponseMessage.failure("用户名已存在")
@@ -53,7 +53,10 @@ class AccountServiceImpl : AccountService {
         account.updateTime = System.currentTimeMillis()
         accountRepository.save(account)
 
-        return ResponseMessage.success(account)
+        val token = UUID.randomUUID().toString()
+        redisUtil["PALADIN_TOKEN_${token}"] = account.id!!
+
+        return ResponseMessage.success(token)
     }
 
     override fun change(id: Long, original: String, password: String): ResponseMessage<Boolean> {
