@@ -19,6 +19,10 @@ public class Result<T extends Serializable> implements Serializable {
         return new Result<T>().touchCode(SUCCESS);
     }
 
+    public static <T extends Serializable>Result<T> success(T content){
+        return new Result<T>().touchCode(SUCCESS).touchContent(content);
+    }
+
     public static <T extends Serializable> Result<T> warning() {
         return new Result<T>().touchCode(WARRING);
     }
