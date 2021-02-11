@@ -20,6 +20,6 @@ public class Profile implements Serializable {
     private Long id;
     private String avatar;
     private String realName;
-    private String gender;
+    private Integer gender;
     private Date birthday;
 }

@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Entity
-@Table("relation")
+@Table(name = "relation")
 public class Relation implements Serializable {
     private static final long serialVersionUID = -3968608607311231128L;
     @Id

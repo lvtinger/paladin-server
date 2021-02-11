@@ -1,4 +1,4 @@
-package org.lvtinger.paladin.web;
+package org.lvtinger.paladin.web.controller;
 
 import org.apache.commons.lang3.StringUtils;
 import org.lvtinger.paladin.account.api.AccountService;
@@ -18,7 +18,7 @@ public class AccountController {
     @Resource
     private SessionService sessionService;
 
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/register.page", method = RequestMethod.POST)
     public Result<String> register(String username, String password, String device) {
         if (StringUtils.isAnyBlank(username, password, device)) {
             return Result.<String>warning().touchMessage("参数错误");
@@ -26,7 +26,7 @@ public class AccountController {
         return accountService.register(username, password, device);
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login.page", method = RequestMethod.POST)
     public Result<String> login(String username, String password, String device) {
         if (StringUtils.isAnyBlank(username, password, device)) {
             return Result.<String>warning().touchMessage("参数错误");
@@ -34,7 +34,7 @@ public class AccountController {
         return accountService.login(username, password, device);
     }
 
-    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    @RequestMapping(value = "/logout.page", method = RequestMethod.POST)
     public Result<Boolean> logout(String token) {
         if (StringUtils.isEmpty(token)) {
             return Result.success(false);
