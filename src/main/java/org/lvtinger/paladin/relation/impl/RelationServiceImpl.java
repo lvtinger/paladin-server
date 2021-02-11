@@ -2,7 +2,9 @@ package org.lvtinger.paladin.relation.impl;
 
 import org.lvtinger.paladin.core.SpringBeanSupport;
 import org.lvtinger.paladin.relation.api.RelationService;
+import org.lvtinger.paladin.relation.api.entity.Relation;
 import org.lvtinger.paladin.relation.impl.handler.RelationHandler;
+import org.lvtinger.paladin.relation.repo.RelationRepository;
 import org.lvtinger.paladin.value.Result;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,12 @@ public class RelationServiceImpl extends SpringBeanSupport implements RelationSe
 
     private final Map<Integer, RelationHandler> relationHandlerHolder = new HashMap<>();
 
+    private final RelationRepository relationRepository;
+
+    public RelationServiceImpl(RelationRepository relationRepository) {
+        this.relationRepository = relationRepository;
+    }
+
     @Override
     public Result<Boolean> make(Long ownerId, Long targetId, Integer type) {
         RelationHandler handler = relationHandlerHolder.get(type);
@@ -22,6 +30,11 @@ public class RelationServiceImpl extends SpringBeanSupport implements RelationSe
             return Result.<Boolean>feature().touchMessage("操作类型错误");
         }
         return handler.execute(ownerId, targetId);
+    }
+
+    @Override
+    public List<Relation> getByOwner(Long ownerId) {
+        return relationRepository.findByOwnerId(ownerId);
     }
 
     @Override
