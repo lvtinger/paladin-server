@@ -1,6 +1,6 @@
 package org.lvtinger.paladin.relation.impl;
 
-import org.lvtinger.paladin.core.SpringBeanSupport;
+import org.lvtinger.paladin.support.SpringBeanSupport;
 import org.lvtinger.paladin.relation.api.RelationService;
 import org.lvtinger.paladin.relation.api.entity.Relation;
 import org.lvtinger.paladin.relation.impl.handler.RelationHandler;

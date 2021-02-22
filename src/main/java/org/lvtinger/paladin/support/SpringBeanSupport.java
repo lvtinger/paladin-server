@@ -1,4 +1,4 @@
-package org.lvtinger.paladin.core;
+package org.lvtinger.paladin.support;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;

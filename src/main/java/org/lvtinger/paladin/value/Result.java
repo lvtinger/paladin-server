@@ -27,6 +27,10 @@ public class Result<T extends Serializable> implements Serializable {
         return new Result<T>().touchCode(WARRING);
     }
 
+    public static <T extends Serializable> Result<T> auth(){
+        return new Result<T>().touchCode(AUTH);
+    }
+
     public static <T extends Serializable> Result<T> feature() {
         return new Result<T>().touchCode(FEATURE);
     }
@@ -46,7 +50,12 @@ public class Result<T extends Serializable> implements Serializable {
         return this;
     }
 
+    public boolean error(){
+        return this.code != SUCCESS;
+    }
+
     public static final int SUCCESS = 2000;
     public static final int FEATURE = 5000;
     public static final int WARRING = 4000;
+    public static final int AUTH = 9000;
 }
